@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Game } from '../../models/game';
 import { PlayerComponent } from "../player/player.component";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent],
+  imports: [CommonModule, PlayerComponent, MatSlideToggleModule, MatIconModule],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
@@ -56,4 +58,12 @@ export class GameComponent implements OnInit {
       console.error('Game object is undefined');
     }
   }
+
+  
 }
+
+
+
+
+
+
